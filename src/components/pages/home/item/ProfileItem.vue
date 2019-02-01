@@ -26,7 +26,7 @@
         </el-col>
         <el-col :span="9">
           <el-card class="base">
-            <div slot="header">基本信息</div>
+            <div slot="header" style="font-weight:bold">基本信息</div>
             <el-col
               class="base-body"
               :span="24"
@@ -41,7 +41,7 @@
         </el-col>
         <el-col :span="9">
           <el-card class="edu">
-            <div slot="header">技术栈</div>
+            <div slot="header" style="font-weight:bold">技术栈</div>
             <el-col
               class="edu-body"
               :span="24"
@@ -153,6 +153,23 @@
               }}</el-tag>
             </div>
           </div>
+          <div class="keda-bottom">
+            <p class="title">{{ workData.keda[3].title }}</p>
+            <div class="body-wrap">
+              <p
+                class="body"
+                v-for="bodyItem in workData.keda[3].body"
+                :key="bodyItem"
+              >
+                {{ bodyItem }}
+              </p>
+            </div>
+            <div class="tag-wrap">
+              <el-tag v-for="tag in workData.keda[3].skill" :key="tag">{{
+                tag
+              }}</el-tag>
+            </div>
+          </div>
         </el-card>
       </el-col>
     </el-tab-pane>
@@ -244,7 +261,7 @@ export default {
     font-size: 16px;
     font-weight: bold;
     text-align: left;
-    margin-bottom: 10px;
+    // margin-bottom: 10px;
     span {
       display: inline-block;
       margin: 10px;

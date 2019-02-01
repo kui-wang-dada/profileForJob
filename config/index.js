@@ -20,11 +20,11 @@ module.exports = {
   },
   // 视图输出总目录
   viewOutputRoot: function() {
-    return this.buildEnv === 'JAVA'
-      ? 'WEB-INF/views/'
-      : this.spaMode
-        ? ''
-        : 'views/';
+    return this.buildEnv === 'JAVA' ?
+      'WEB-INF/views/' :
+      this.spaMode ?
+      '' :
+      'views/';
   },
   // 禁用热替换
   disableHMR: process.env.NODE_ENV === 'production' ? true : false,
@@ -49,9 +49,9 @@ module.exports = {
     // in the browser.
     showEslintErrorsInOverlay: false,
     // 代理列表, 是否开启代理
-    proxyTable: !devEnv.USE_PROXY
-    ? {}
-    : {
+    proxyTable: !devEnv.USE_PROXY ?
+      {} :
+      {
         '/sparkle-admin': {
           target: 'http://172.16.16.53:8081',
           secure: false,
@@ -62,11 +62,11 @@ module.exports = {
   // 构建配置
   build: {
     // 存放根路径
-    assetsRoot: path.resolve(__dirname, '../dist'),
+    assetsRoot: path.resolve(__dirname, '../homePage'),
     // 二级目录，存放静态资源文件的目录，位于dist文件夹下
     assetsSubDirectory: 'assets',
     // 发布路径，设置之后构建的产品文件在注入到index.html中的时候就会带上这里的发布路径
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     // 是否使用source-map
     productionSourceMap: false,
     // https://webpack.js.org/configuration/devtool/#production

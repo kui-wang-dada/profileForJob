@@ -9,8 +9,8 @@
   <el-row>
     <el-col :span="6" v-for="(item, index) in inidicatorData" :key="index">
       <el-card>
-        <div class="box-card">
-          <div><img src="@/assets/images/logo.png" alt="" class="image" /></div>
+        <div class="box-card" @click="goToProject(index)">
+          <div><img :src="imgWrap[index]" alt="" class="image" /></div>
           <div class="card-right">
             <p class="title">{{ item.title }}</p>
             <p class="des">{{ item.des }}</p>
@@ -55,6 +55,12 @@ export default {
           des: 'node+koa',
           tags: ['node', 'koa', 'mysql']
         }
+      ],
+      imgWrap: [
+        require('@/assets/images/logo.png'),
+        require('@/assets/images/admin.jpg'),
+        require('@/assets/images/react.jpg'),
+        require('@/assets/images/node.jpg')
       ]
     };
   },
@@ -63,7 +69,26 @@ export default {
 
   mounted() {},
 
-  methods: {}
+  methods: {
+    goToProject(index) {
+      if (index === 0) {
+        window.open('http://www.dadafastrun.com/music/');
+        return;
+      }
+      if (index === 1) {
+        window.open('http://www.dadafastrun.com/admin/');
+        return;
+      }
+      if (index === 2) {
+        window.open('http://www.dadafastrun.com/yryz/');
+        return;
+      }
+      if (index === 3) {
+        window.open('http://www.dadafastrun.com/student/');
+        return;
+      }
+    }
+  }
 };
 </script>
 <style lang="less" scoped>

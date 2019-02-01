@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         label: '期待薪资',
-        result: '15K',
+        result: '13K',
         style: {}
       }
     ],
@@ -93,15 +93,18 @@ module.exports = {
     ],
     eduData: [
       ' 1、具有良好的编码习惯，贯彻小而美，组件化，语义化的编程思想。',
-      ' 2、熟练掌握 PS切图，雪碧图的制作，对html的各项标签十分熟悉。',
-      ' 3、CSS熟练掌握，熟悉使用scss，less等预处理器，flex布局和bootstrap。',
-      ' 4、对JS知识有一定掌握，对数据类型及其方法，函数闭包、 this指向及内存，对象，原型链，BOM，DOM等熟悉掌握。',
-      ' 5、熟悉 ES6，7语法，promise，箭头函数，解构赋值等语法使用频繁。',
-      ' 6、掌握VUE+React全家桶，熟悉VUEX+Redux等状态管理库实现方式，对其虚拟DOM，双向绑定以及单向数据流有一定理解。',
-      ' 7、掌握React-Native跨平台开发App，熟悉API并有三次迭代经验。',
-      ' 8、掌握Vue开发Web程序，有多次后台管理系统和企业应用的开发经验',
-      ' 9、熟练Git和Svn等版本管理工具，熟练Webpack打包工具',
-      ' 10、熟练服务器操作，nginx反向代理负载均衡和PM2部署操作'
+      ' 2、掌握PS，雪碧图制作，熟练操作Bom,Dom，html语义化标签。',
+      ' 3、掌握CSS，熟练使用less，scss等预处理器，flex布局和bootstrap。',
+      ' 4、掌握JS，对数据类型及其方法，变量提升和作用域链（this，闭包），js的oop（原型，继承），事件循环等有自己的理解。',
+      ' 5、熟练ES6，7语法，异步，箭头函数，解构赋值等语法使用频繁。',
+      ' 6、熟练http协议，了解B/S、C/S通信过程，了解各个过程缓存使用。',
+      ' 6、熟练VUE+React全家桶，熟悉VUEX+Redux等状态管理库实现方式，对其虚拟DOM，双向绑定以及单向数据流有一定理解。',
+      ' 7、熟练React-Native跨平台开发App，熟悉API并有三次迭代经验。',
+      ' 8、掌握Vue开发Web程序，有多次后台管理系统和企业应用开发经验',
+      ' 9、熟悉node+mysql+koa或express+mongodb搭建后台服务。',
+      ' 10、熟练Git和Svn等版本管理工具，熟悉Webpack优化和打包',
+      ' 11、熟练服务器操作，nginx反向代理负载均衡和PM2一键部署',
+      ' 12、接触Vue+React多种架构，对模块化规范化自动化有一定理解'
     ],
     workData: {
       yunli: [
@@ -114,13 +117,13 @@ module.exports = {
           skill: ['jquery', 'bootstrap', 'flex']
         },
         {
-          title: 'Vue+Element开发教师备课系统',
+          title: 'Vue+Element+admin初探',
           body: [
-            'vue-router动态嵌套路由',
-            'Echarts饼图和地图集成到项目中',
-            '多层级跳转+面包屑使用localStorage存值'
+            '根据github上知名项目改造',
+            '熟悉element-ui,更改数据和接口',
+            '跨域处理'
           ],
-          skill: ['Vue', 'Vue-router', 'Echarts']
+          skill: ['Vue', 'element', 'cors']
         }
       ],
       youran: [
@@ -161,6 +164,15 @@ module.exports = {
             '通过Egret技术栈制作小鸟飞飞小游戏'
           ],
           skill: ['Egret', 'TypeScript', 'js']
+        },
+        {
+          title: 'Vue+Element开发教师备课系统',
+          body: [
+            'vue-router动态嵌套路由',
+            'Echarts饼图和地图集成到项目中',
+            '多层级跳转+面包屑使用localStorage存值'
+          ],
+          skill: ['Vue', 'Vue-router', 'Echarts']
         },
         {
           title: 'Vue+Element后台管理系统',
@@ -224,95 +236,141 @@ module.exports = {
   blog: {
     article: [
       {
-        label: 'ES6之this指向',
-        url: ''
+        label: 'JavaScript——面向对象程序设计和继承',
+        url: 'https://www.jianshu.com/p/2e7b3a4c94a5'
       },
       {
         label: 'JavaScript代码简洁之道',
-        url: ''
+        url: 'https://www.jianshu.com/p/f980cf1410af'
       },
       {
         label: 'JS条件语句的几条精简原则',
-        url: ''
+        url: 'https://www.jianshu.com/p/661ebbdd34f4'
       },
       {
         label: 'KOA2+Sequelize初探',
-        url: ''
+        url: 'https://www.jianshu.com/p/d687885525ff'
+      },
+      {
+        label: '全栈工程师思考',
+        url: 'https://www.jianshu.com/p/c9765582752d'
       },
       {
         label: 'Webpack文档学习小结',
-        url: ''
+        url: 'https://www.jianshu.com/p/f8c32d1bf3bb'
       },
       {
         label: '设计模式读书笔记',
-        url: ''
+        url: 'https://www.jianshu.com/p/b33cbda78448'
       },
       {
         label: '浅拷贝和深拷贝学习笔记',
-        url: ''
+        url: 'https://www.jianshu.com/p/c951f53eb5dc'
       }
     ],
     skill: [
       {
-        percent: '85',
+        percent: 85,
         label: 'vue',
         color: '#67c23a'
       },
       {
-        percent: '75',
+        percent: 75,
         label: 'react-native',
         color: '#67c23a'
       },
       {
-        percent: '70',
+        percent: 70,
         label: 'react',
         color: 'rgba(142, 113, 199, 0.7)'
       },
       {
-        percent: '70',
+        percent: 70,
         label: 'ES6,7+JS',
         color: 'rgba(142, 113, 199, 0.7)'
       },
       {
-        percent: '70',
+        percent: 70,
         label: 'CSS',
         color: 'rgba(142, 113, 199, 0.7)'
       },
       {
-        percent: '65',
+        percent: 65,
         label: 'node',
         color: '#409eff'
       },
       {
-        percent: '65',
+        percent: 65,
         label: 'express+koa',
         color: '#409eff'
       },
       {
-        percent: '55',
+        percent: 55,
         label: 'mongodb+mongoose',
         color: '#f56c6c'
       },
       {
-        percent: '50',
+        percent: 50,
         label: 'mysql+sequelize',
         color: '#f56c6c'
       },
       {
-        percent: '65',
+        percent: 65,
         label: 'Git+SVN',
         color: '#409eff'
       },
       {
-        percent: '55',
+        percent: 55,
         label: 'Nginx+pm2',
         color: '#f56c6c'
       },
       {
-        percent: '55',
+        percent: 55,
         label: 'webpack',
         color: '#f56c6c'
       }
     ]
-  }
+  },
+  project: [
+    {
+      image: 'music',
+      title: 'Vue音乐播放器',
+      des: 'vuex+node抓包用的较深'
+    },
+    {
+      image: 'admin',
+      title: 'Vue后台管理系统',
+      des: '权限路由+vuex的深度结合'
+    },
+    {
+      image: 'bird',
+      title: 'Egret制作小鸟飞飞',
+      des: '用Egret自我练习小游戏的制作'
+    },
+    {
+      image: 'student',
+      title: 'node+koa制作学生系统',
+      des: 'node实现服务端接口的增删改查'
+    },
+    {
+      image: 'yryz',
+      title: 'ReactNative悠然一指迭代',
+      des: '可在应用市场找到对应APP'
+    },
+    {
+      image: 'quanhu',
+      title: 'ReactNative圈乎迭代',
+      des: '可在应用市场找到对应APP'
+    },
+    {
+      image: 'element',
+      title: 'Vue+Node 学习项目',
+      des: 'node+vue实现前后端全栈'
+    },
+    {
+      image: 'nw',
+      title: 'nw实现桌面程序',
+      des: 'nw实现教师助手桌面程序'
+    }
+  ]
 };

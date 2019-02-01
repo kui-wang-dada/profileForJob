@@ -1,10 +1,12 @@
+<!-- @format -->
+
 <!--@format
  by: wk 2018/12/18
  name: 
  备注:
 -->
 <template>
-  <div>我是个人简历页面</div>
+  <div class="profile"><img src="@/assets/images/wk.png" alt="" /></div>
 </template>
 
 <script>
@@ -19,12 +21,15 @@ export default {
     return {};
   },
 
-  created() { },
+  created() {},
 
-  mounted() { },
+  mounted() {},
 
   methods: {}
-}
-
+};
 </script>
-<style lang='less' scoped></style>
+<style lang="less" scoped>
+.profile {
+  margin-top: 20px;
+}
+</style>
