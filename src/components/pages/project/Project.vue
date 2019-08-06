@@ -7,24 +7,103 @@
 -->
 <template>
   <div>
-    <el-col :span="8" v-for="(item, index) in projectData" :key="index">
-      <el-card>
-        <div @click="goToProject(item.image)">
-          <img
-            :src="require('@/assets/images/' + item.image)"
-            alt=""
-            class="image"
-          />
-          <p class="title">{{ item.title }}</p>
-          <p class="des">{{ item.des }}</p>
-        </div>
-      </el-card>
-    </el-col>
+    <el-tabs type="border-card">
+      <el-tab-pane label="ReactNative">
+        <el-col :span="8" v-for="(item, index) in ReactNative" :key="index">
+          <el-card>
+            <div @click="goToProject(item.image)">
+              <img
+                :src="require('@/assets/images/' + item.image)"
+                alt
+                class="image"
+              />
+              <p class="title">{{ item.title }}</p>
+              <p class="des">{{ item.des }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-tab-pane>
+      <el-tab-pane label="Vue">
+        <el-col :span="8" v-for="(item, index) in Vue" :key="index">
+          <el-card>
+            <div @click="goToProject(item.image)">
+              <img
+                :src="require('@/assets/images/' + item.image)"
+                alt
+                class="image"
+              />
+              <p class="title">{{ item.title }}</p>
+              <p class="des">{{ item.des }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-tab-pane>
+      <el-tab-pane label="Node">
+        <el-col :span="8" v-for="(item, index) in Node" :key="index">
+          <el-card>
+            <div @click="goToProject(item.image)">
+              <img
+                :src="require('@/assets/images/' + item.image)"
+                alt
+                class="image"
+              />
+              <p class="title">{{ item.title }}</p>
+              <p class="des">{{ item.des }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-tab-pane>
+      <el-tab-pane label="Egret">
+        <el-col :span="8" v-for="(item, index) in Egret" :key="index">
+          <el-card>
+            <div @click="goToProject(item.image)">
+              <img
+                :src="require('@/assets/images/' + item.image)"
+                alt
+                class="image"
+              />
+              <p class="title">{{ item.title }}</p>
+              <p class="des">{{ item.des }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-tab-pane>
+      <el-tab-pane label="NW">
+        <el-col :span="8" v-for="(item, index) in Nw" :key="index">
+          <el-card>
+            <div @click="goToProject(item.image)">
+              <img
+                :src="require('@/assets/images/' + item.image)"
+                alt
+                class="image"
+              />
+              <p class="title">{{ item.title }}</p>
+              <p class="des">{{ item.des }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-tab-pane>
+      <el-tab-pane label="微信小程序">
+        <el-col :span="8" v-for="(item, index) in Nw" :key="index">
+          <el-card>
+            <div @click="goToProject(item.image)">
+              <img
+                :src="require('@/assets/images/' + item.image)"
+                alt
+                class="image"
+              />
+              <p class="title">{{ item.title }}</p>
+              <p class="des">{{ item.des }}</p>
+            </div>
+          </el-card>
+        </el-col>
+      </el-tab-pane>
+    </el-tabs>
   </div>
 </template>
 
 <script>
-import { project } from 'home/item/mockData';
+import { ReactNative, Vue, Node, Egret, Nw } from './mockData';
 export default {
   components: {},
 
@@ -34,7 +113,11 @@ export default {
 
   data() {
     return {
-      projectData: project
+      ReactNative,
+      Vue,
+      Node,
+      Egret,
+      Nw
     };
   },
 

@@ -76,7 +76,8 @@ class Api {
       Object.defineProperty(this.api, `${apiname}`, {
         value(outerParams, outerOptions) {
           // let _data = _isEmpty(outerParams) ? params : _pick(_assign({}, params, outerParams), Object.keys(params));
-          let _data = _isArray(outerParams) || outerParams instanceof FormData
+          let _data =
+            _isArray(outerParams) || outerParams instanceof FormData
               ? outerParams
               : _merge({}, params, outerParams);
           return axios(

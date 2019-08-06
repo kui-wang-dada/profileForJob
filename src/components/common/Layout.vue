@@ -27,34 +27,40 @@
           @close="handleClose"
         >
           <el-menu-item index="home">
-            <i class="el-icon-menu"></i> <span slot="title">首页</span>
+            <i class="el-icon-menu"></i>
+            <span slot="title">首页</span>
           </el-menu-item>
           <el-menu-item index="profile">
-            <i class="el-icon-edit"></i> <span slot="title">个人简历</span>
+            <i class="el-icon-edit"></i>
+            <span slot="title">个人简历</span>
           </el-menu-item>
           <el-menu-item index="project">
-            <i class="el-icon-view"></i> <span slot="title">项目实例</span>
+            <i class="el-icon-view"></i>
+            <span slot="title">项目实例</span>
           </el-menu-item>
-          <el-menu-item index="blog">
-            <i class="el-icon-document"></i> <span slot="title">个人博文</span>
+          <el-menu-item @click="goToBlog">
+            <i class="el-icon-document"></i>
+            <span slot="title">个人博文</span>
           </el-menu-item>
-          <el-menu-item index="" @click="goToBlog">
-            <i class="el-icon-document"></i> <span slot="title">简书</span>
+          <el-menu-item index @click="goToBook">
+            <i class="el-icon-document"></i>
+            <span slot="title">简书</span>
           </el-menu-item>
-          <el-menu-item index="" @click="goToGithub">
-            <i class="el-icon-document"></i> <span slot="title">Github</span>
+          <el-menu-item index @click="goToGithub">
+            <i class="el-icon-document"></i>
+            <span slot="title">Github</span>
           </el-menu-item>
         </el-menu>
       </el-aside>
       <el-main>
-        <el-breadcrumb separator="/">
+        <!-- <el-breadcrumb separator="/">
           <el-breadcrumb-item
             :to="{ path: item.path }"
             v-for="item in bread"
             :key="item.path"
             >{{ item.title }}</el-breadcrumb-item
           >
-        </el-breadcrumb>
+        </el-breadcrumb> -->
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -87,6 +93,9 @@ export default {
 
   methods: {
     goToBlog() {
+      window.open('http://www.dadafastrun.com/blog/');
+    },
+    goToBook() {
       window.open('https://www.jianshu.com/u/3052cc751713');
     },
     goToGithub() {

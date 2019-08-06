@@ -25,12 +25,6 @@ export default [
         name: 'project',
         component: require('project/Project.vue').default,
         meta: { title: '项目实例' }
-      },
-      {
-        path: 'blog',
-        name: 'blog',
-        component: require('blog/Blog.vue').default,
-        meta: { title: '个人博文' }
       }
     ]
   }
