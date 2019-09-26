@@ -25,7 +25,7 @@ module.exports = {
       },
       {
         label: '期待薪资',
-        result: '13K',
+        result: '16K',
         style: {}
       }
     ],
@@ -72,39 +72,41 @@ module.exports = {
       },
       {
         label: '工作经历1',
-        result: '九真山社区党委副书记1年半',
-        style: {}
-      },
-      {
-        label: '工作经历2',
         result: '云里服务有限公司9个月',
         style: {}
       },
       {
-        label: '工作经历3',
+        label: '工作经历2',
         result: '悠然一指有限公司11个月',
         style: {}
       },
       {
+        label: '工作经历3',
+        result: '科大讯飞有限公司12个月',
+        style: {}
+      },
+      {
         label: '工作经历4',
-        result: '科大讯飞有限公司已8个月',
+        result: '厚仁教育8个月',
         style: {}
       }
     ],
     eduData: [
       ' 1、具有良好的编码习惯，贯彻小而美，组件化，语义化的编程思想。',
-      ' 2、掌握PS，雪碧图制作，熟练操作Bom,Dom，html语义化标签。',
-      ' 3、掌握CSS，熟练使用less，scss等预处理器，flex布局和bootstrap。',
-      ' 4、掌握JS，对数据类型及其方法，变量提升和作用域链（this，闭包），js的oop（原型，继承），事件循环等有自己的理解。',
-      ' 5、熟练ES6，7语法，异步，箭头函数，解构赋值等语法使用频繁。',
-      ' 6、熟练http协议，了解B/S、C/S通信过程，了解各个过程缓存使用。',
-      ' 6、熟练VUE+React全家桶，熟悉VUEX+Redux等状态管理库实现方式，对其虚拟DOM，双向绑定以及单向数据流有一定理解。',
-      ' 7、熟练React-Native跨平台开发App，熟悉API并有三次迭代经验。',
-      ' 8、掌握Vue开发Web程序，有多次后台管理系统和企业应用开发经验',
-      ' 9、熟悉node+mysql+koa或express+mongodb搭建后台服务。',
-      ' 10、熟练Git和Svn等版本管理工具，熟悉Webpack优化和打包',
-      ' 11、熟练服务器操作，nginx反向代理负载均衡和PM2一键部署',
-      ' 12、接触Vue+React多种架构，对模块化规范化自动化有一定理解'
+      ' 2、掌握PS，掌握CSS，熟练使用less，scss，flex，bootstrap等',
+      ' 3、掌握JS，对数据类型及其方法，变量提升和作用域链（this，闭包），js的oop（原型，继承），事件循环等有自己的理解。',
+      ' 4、熟练ES6，7语法，promise，async/await，箭头函数，解构赋值等语法频繁使用。',
+      ' 5、熟练http协议，了解B/S、C/S通信过程，了解各个过程缓存使用。',
+      ' 6、熟练VUE+React全家桶，熟悉VUEX+Redux等状态管理库实现方式，对框架实现机制有一定理解。',
+      ' 7、熟悉wordpress，制作过多个企业官网，有一定开发能力',
+      ' 8、掌握Vue开发Web程序，有多次后台管理系统和企业应用开发经验。',
+      ' 9、熟悉微信生态和api，独立开发自己的微信公众号和小程序——大前端自学联盟',
+      ' 10、熟练React-Native跨平台开发App，一个人(前端)开发了两款商用App',
+      ' 11、有过node+mysql+koa或express+mongodb搭建后台服务的实战经验',
+      ' 12、熟练Git和Svn等版本管理工具，熟悉Webpack优化和打包',
+      ' 13、熟练服务器操作，nginx反向代理负载均衡和PM2一键部署',
+      ' 14、熟悉docker，利用docker统一管理个人网站上的wordpress,自建yapi，自建gitlab，node服务等',
+      ' 15、接触node/vue/react多种架构，有一定的架构能力'
     ],
     workData: {
       yunli: [

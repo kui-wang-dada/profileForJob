@@ -5,12 +5,20 @@ module.exports = {
     {
       image: 'yryz',
       title: 'ReactNative悠然一指迭代',
+      local: true,
       des: '可在应用市场找到对应APP'
     },
     {
       image: 'quanhu',
       title: 'ReactNative圈乎迭代',
+      local: true,
       des: '可在应用市场找到对应APP'
+    },
+    {
+      image: 'houren',
+      title: '厚仁教育APP',
+      local: true,
+      des: '独立开发，包括原生'
     }
   ],
   Vue: [
@@ -22,6 +30,7 @@ module.exports = {
     {
       image: 'admin',
       title: 'Vue后台管理系统',
+      local: true,
       des: '权限路由+vuex的深度结合'
     }
   ],
@@ -48,8 +57,20 @@ module.exports = {
     {
       image: 'nw',
       title: 'nw实现桌面程序',
+      local: true,
       des: 'nw实现教师助手桌面程序'
     }
   ],
-  wechat: [{}]
+  Wechat: [
+    {
+      image: 'wechat',
+      title: '微信公众号(扫我)',
+      des: '大前端自学社区联盟——暂时用来测试微信接口'
+    },
+    {
+      image: 'wechat2',
+      title: '微信小程序(扫我)',
+      des: '厚仁留学——自学demo'
+    }
+  ]
 };

@@ -21,20 +21,20 @@
       <el-aside width="200px">
         <el-menu
           router
-          :default-active="$route.name"
+          :default-active="$route.matched[1].path"
           class="el-menu-vertical-demo"
           @open="handleOpen"
           @close="handleClose"
         >
-          <el-menu-item index="home">
+          <el-menu-item index="/home">
             <i class="el-icon-menu"></i>
             <span slot="title">首页</span>
           </el-menu-item>
-          <el-menu-item index="profile">
+          <el-menu-item index="/profile">
             <i class="el-icon-edit"></i>
             <span slot="title">个人简历</span>
           </el-menu-item>
-          <el-menu-item index="project">
+          <el-menu-item index="/project">
             <i class="el-icon-view"></i>
             <span slot="title">项目实例</span>
           </el-menu-item>
@@ -60,7 +60,7 @@
             :key="item.path"
             >{{ item.title }}</el-breadcrumb-item
           >
-        </el-breadcrumb> -->
+        </el-breadcrumb>-->
         <router-view></router-view>
       </el-main>
     </el-container>
@@ -90,7 +90,11 @@ export default {
   mounted() {
     console.log(this.$route);
   },
-
+  watch: {
+    $route() {
+      console.log(32, this.$route);
+    }
+  },
   methods: {
     goToBlog() {
       window.open('http://www.dadafastrun.com/blog/');

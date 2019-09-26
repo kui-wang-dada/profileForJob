@@ -22,9 +22,23 @@ export default [
       },
       {
         path: 'project',
-        name: 'project',
-        component: require('project/Project.vue').default,
-        meta: { title: '项目实例' }
+
+        component: require('project/Default.vue').default,
+        meta: { title: '项目实例' },
+        children: [
+          {
+            path: '/',
+            name: 'project',
+            component: require('project/Project.vue').default,
+            meta: { title: '项目实例' }
+          },
+          {
+            path: ':id',
+            name: 'projectDetail',
+            component: require('project/Detail.vue').default,
+            meta: { title: '项目实例' }
+          }
+        ]
       }
     ]
   }

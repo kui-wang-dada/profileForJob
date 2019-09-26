@@ -9,7 +9,7 @@
   <el-tabs type="border-card">
     <el-tab-pane label="基本信息">
       <el-row type="flex">
-        <el-col :span="6" :style="{ alignSelf: 'center' }">
+        <el-col :span="5" :style="{ alignSelf: 'center' }">
           <img src="@/assets/images/avatar.jpg" class="avatar" />
           <div style="padding: 14px;">
             <el-col
@@ -24,7 +24,7 @@
             </el-col>
           </div>
         </el-col>
-        <el-col :span="9">
+        <el-col :span="6">
           <el-card class="base">
             <div slot="header" style="font-weight:bold">基本信息</div>
             <el-col
@@ -39,7 +39,7 @@
             </el-col>
           </el-card>
         </el-col>
-        <el-col :span="9">
+        <el-col :span="13">
           <el-card class="edu">
             <div slot="header" style="font-weight:bold">技术栈</div>
             <el-col

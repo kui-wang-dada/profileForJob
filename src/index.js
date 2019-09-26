@@ -5,7 +5,7 @@ import '@/assets/css/base.css';
 
 import Vue from 'vue';
 import App from './App';
-
+import 'swiper/dist/css/swiper.css';
 // 导入插件
 import plugin from '@/plugins';
 import router from '@/router';
@@ -76,6 +76,7 @@ import {
   Main,
   Footer,
   Loading,
+  Image,
   MessageBox,
   Message,
   Notification
@@ -144,7 +145,7 @@ Vue.use(Header);
 Vue.use(Aside);
 Vue.use(Main);
 Vue.use(Footer);
-
+Vue.use(Image);
 Vue.prototype.$loading = Loading.service;
 Vue.prototype.$msgbox = MessageBox;
 Vue.prototype.$alert = MessageBox.alert;

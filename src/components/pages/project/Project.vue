@@ -11,7 +11,7 @@
       <el-tab-pane label="ReactNative">
         <el-col :span="8" v-for="(item, index) in ReactNative" :key="index">
           <el-card>
-            <div @click="goToProject(item.image)">
+            <div @click="goToProject(item)">
               <img
                 :src="require('@/assets/images/' + item.image)"
                 alt
@@ -26,7 +26,7 @@
       <el-tab-pane label="Vue">
         <el-col :span="8" v-for="(item, index) in Vue" :key="index">
           <el-card>
-            <div @click="goToProject(item.image)">
+            <div @click="goToProject(item)">
               <img
                 :src="require('@/assets/images/' + item.image)"
                 alt
@@ -41,7 +41,7 @@
       <el-tab-pane label="Node">
         <el-col :span="8" v-for="(item, index) in Node" :key="index">
           <el-card>
-            <div @click="goToProject(item.image)">
+            <div @click="goToProject(item)">
               <img
                 :src="require('@/assets/images/' + item.image)"
                 alt
@@ -56,7 +56,7 @@
       <el-tab-pane label="Egret">
         <el-col :span="8" v-for="(item, index) in Egret" :key="index">
           <el-card>
-            <div @click="goToProject(item.image)">
+            <div @click="goToProject(item)">
               <img
                 :src="require('@/assets/images/' + item.image)"
                 alt
@@ -71,7 +71,7 @@
       <el-tab-pane label="NW">
         <el-col :span="8" v-for="(item, index) in Nw" :key="index">
           <el-card>
-            <div @click="goToProject(item.image)">
+            <div @click="goToProject(item)">
               <img
                 :src="require('@/assets/images/' + item.image)"
                 alt
@@ -84,9 +84,9 @@
         </el-col>
       </el-tab-pane>
       <el-tab-pane label="微信小程序">
-        <el-col :span="8" v-for="(item, index) in Nw" :key="index">
+        <el-col :span="8" v-for="(item, index) in Wechat" :key="index">
           <el-card>
-            <div @click="goToProject(item.image)">
+            <div @click="goToProject(item)">
               <img
                 :src="require('@/assets/images/' + item.image)"
                 alt
@@ -103,7 +103,7 @@
 </template>
 
 <script>
-import { ReactNative, Vue, Node, Egret, Nw } from './mockData';
+import { ReactNative, Vue, Node, Egret, Nw, Wechat } from './mockData';
 export default {
   components: {},
 
@@ -117,7 +117,8 @@ export default {
       Vue,
       Node,
       Egret,
-      Nw
+      Nw,
+      Wechat
     };
   },
 
@@ -126,8 +127,17 @@ export default {
   mounted() {},
 
   methods: {
-    goToProject(type) {
-      let baseUrl = `http://www.dadafastrun.com/${type}/`;
+    goToProject(item) {
+      if (item.image.includes('wechat')) {
+        return;
+      }
+      if (item.local) {
+        this.$router.push({
+          path: `/project/${item.image}`
+        });
+        return;
+      }
+      let baseUrl = `http://www.dadafastrun.com/${item.image}/`;
       window.open(baseUrl);
     }
   }
@@ -141,7 +151,7 @@ export default {
   cursor: pointer;
 }
 .image {
-  width: 100%;
+  width: auto;
   height: 300px;
 }
 .title {

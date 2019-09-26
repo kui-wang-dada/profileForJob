@@ -6,7 +6,14 @@
  备注:
 -->
 <template>
-  <div class="profile"><img src="@/assets/images/wk.png" alt="" /></div>
+  <div class="profile">
+    <!-- <img src="@/assets/images/wk.png" alt class="img" /> -->
+    <el-image
+      style="width: 60%; height: auto"
+      :src="require('@/assets/images/wk.png')"
+      :preview-src-list="srcList"
+    ></el-image>
+  </div>
 </template>
 
 <script>
@@ -18,7 +25,9 @@ export default {
   computed: {},
 
   data() {
-    return {};
+    return {
+      srcList: [require('@/assets/images/wk.png')]
+    };
   },
 
   created() {},
