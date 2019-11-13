@@ -3,6 +3,12 @@
 module.exports = {
   ReactNative: [
     {
+      image: 'houren',
+      title: '厚仁教育APP',
+      local: true,
+      des: '独立开发，包括原生'
+    },
+    {
       image: 'yryz',
       title: 'ReactNative悠然一指迭代',
       local: true,
@@ -13,12 +19,6 @@ module.exports = {
       title: 'ReactNative圈乎迭代',
       local: true,
       des: '可在应用市场找到对应APP'
-    },
-    {
-      image: 'houren',
-      title: '厚仁教育APP',
-      local: true,
-      des: '独立开发，包括原生'
     }
   ],
   Vue: [

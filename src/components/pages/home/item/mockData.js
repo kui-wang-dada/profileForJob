@@ -109,47 +109,33 @@ module.exports = {
       ' 15、接触node/vue/react多种架构，有一定的架构能力'
     ],
     workData: {
-      yunli: [
+      houren: [
         {
-          title: '微信小程序以及微信内嵌页面开发',
+          title: '独立完成厚仁教育APP',
           body: [
-            "负责微信小程序'自购'前端开发",
-            '联盛超市会员办理、手机充值、生日礼品券等'
+            '通过vue+cordova完成第一版app，熟悉业务',
+            '通过ReactNative完成第二版app，加大功能',
+            'ReactNative,ReactNagavigation,ReactRedux全家桶'
           ],
-          skill: ['jquery', 'bootstrap', 'flex']
+          skill: ['架构能力', '业务能力', '原型+ui+前端混合能力', '原生能力']
         },
         {
-          title: 'Vue+Element+admin初探',
+          title: 'wordPress完成集团6套官网',
           body: [
-            '根据github上知名项目改造',
-            '熟悉element-ui,更改数据和接口',
-            '跨域处理'
+            '通过wordpress快速搭建官网',
+            '实现各业务组信息展示，seo，流量导流等功能'
           ],
-          skill: ['Vue', 'element', 'cors']
-        }
-      ],
-      youran: [
+          skill: ['wordPress', '快速构建官网', 'php']
+        },
         {
-          title: '悠然一指APP 4.0、5.0迭代、圈乎APP 3.0迭代',
+          title: 'vue+element+admin重构集团erp',
           body: [
-            '通过React-Native重构公司悠然一指+圈乎APP，负责首页、详情页评论收藏点赞页面逻辑和公共组件编写',
-            '通过Swagger和后端联调，UI使用NativeBase以及React-native-element库，充分模块化组件化',
-            '灵活使用redux和事件通知处理组件之间通信',
-            '和原生同事紧密联系，协作开发'
+            '独立完成pc端后台管理系统前端代码',
+            '对io流/权限控制的后台管理场景有了更深的理解'
           ],
-          skill: [
-            'React-Native',
-            'React-Redux',
-            'Git',
-            'js',
-            'es6,7',
-            'expo',
-            'eslint',
-            'webpack'
-          ]
+          skill: ['vue', 'erp']
         }
       ],
-
       keda: [
         {
           title: 'nw+jquery制作教师助手桌面程序',
@@ -185,6 +171,46 @@ module.exports = {
             '对element-ui的table进行封装，设计公共方法处理接口数据，然后通过写配置文件兼顾异同，通过组件挂载'
           ],
           skill: ['权限路由思路', 'vuex', '设计模式', 'less']
+        }
+      ],
+      youran: [
+        {
+          title: '悠然一指APP 4.0、5.0迭代、圈乎APP 3.0迭代',
+          body: [
+            '通过React-Native重构公司悠然一指+圈乎APP，负责首页、详情页评论收藏点赞页面逻辑和公共组件编写',
+            '通过Swagger和后端联调，UI使用NativeBase以及React-native-element库，充分模块化组件化',
+            '灵活使用redux和事件通知处理组件之间通信',
+            '和原生同事紧密联系，协作开发'
+          ],
+          skill: [
+            'React-Native',
+            'React-Redux',
+            'Git',
+            'js',
+            'es6,7',
+            'expo',
+            'eslint',
+            'webpack'
+          ]
+        }
+      ],
+      yunli: [
+        {
+          title: '微信小程序以及微信内嵌页面开发',
+          body: [
+            "负责微信小程序'自购'前端开发",
+            '联盛超市会员办理、手机充值、生日礼品券等'
+          ],
+          skill: ['jquery', 'bootstrap', 'flex']
+        },
+        {
+          title: 'Vue+Element+admin初探',
+          body: [
+            '根据github上知名项目改造',
+            '熟悉element-ui,更改数据和接口',
+            '跨域处理'
+          ],
+          skill: ['Vue', 'element', 'cors']
         }
       ]
     },

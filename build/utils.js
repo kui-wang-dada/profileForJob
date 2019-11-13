@@ -1,16 +1,16 @@
 /** @format */
 
-'use strict';
-const path = require('path');
-const glob = require('glob');
-const config = require('../config');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
-const HtmlWebpackPlugin = require('html-webpack-plugin');
-const pkg = require('../package.json');
+"use strict";
+const path = require("path");
+const glob = require("glob");
+const config = require("../config");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const pkg = require("../package.json");
 
 exports.assetsPath = function(_path) {
   const assetsSubDirectory =
-    process.env.NODE_ENV === 'production'
+    process.env.NODE_ENV === "production"
       ? config.build.assetsSubDirectory
       : config.dev.assetsSubDirectory;
   return path.posix.join(assetsSubDirectory, _path);
@@ -21,14 +21,14 @@ exports.cssLoaders = function(options) {
   options = options || {};
 
   const cssLoader = {
-    loader: 'css-loader',
+    loader: "css-loader",
     options: {
       sourceMap: options.sourceMap
     }
   };
 
   const postcssLoader = {
-    loader: 'postcss-loader',
+    loader: "postcss-loader",
     options: {
       sourceMap: options.sourceMap
     }
@@ -40,7 +40,7 @@ exports.cssLoaders = function(options) {
       : [cssLoader];
     if (loader) {
       loaders.push({
-        loader: loader + '-loader',
+        loader: loader + "-loader",
         options: Object.assign({}, loaderOptions, {
           sourceMap: options.sourceMap
         })
@@ -50,21 +50,22 @@ exports.cssLoaders = function(options) {
     if (options.extract) {
       return ExtractTextPlugin.extract({
         use: loaders,
-        fallback: 'style-loader'
+        fallback: "style-loader",
+        publicPath: "../../"
       });
     } else {
-      return ['style-loader'].concat(loaders);
+      return ["style-loader"].concat(loaders);
     }
   }
 
   return {
     css: generateLoaders(),
     postcss: generateLoaders(),
-    less: generateLoaders('less', { javascriptEnabled: true }),
-    sass: generateLoaders('sass', { indentedSyntax: true }),
-    scss: generateLoaders('sass'),
-    stylus: generateLoaders('stylus'),
-    styl: generateLoaders('stylus')
+    less: generateLoaders("less", { javascriptEnabled: true }),
+    sass: generateLoaders("sass", { indentedSyntax: true }),
+    scss: generateLoaders("sass"),
+    stylus: generateLoaders("stylus"),
+    styl: generateLoaders("stylus")
   };
 };
 
@@ -75,7 +76,7 @@ exports.styleLoaders = function(options) {
   for (const extension in loaders) {
     const loader = loaders[extension];
     output.push({
-      test: new RegExp('\\.' + extension + '$'),
+      test: new RegExp("\\." + extension + "$"),
       use: loader
     });
   }
@@ -83,20 +84,20 @@ exports.styleLoaders = function(options) {
 };
 
 exports.createNotifierCallback = function() {
-  const notifier = require('node-notifier');
+  const notifier = require("node-notifier");
 
   return function(severity, errors) {
-    if (severity !== 'error') {
+    if (severity !== "error") {
       return;
     }
     const error = errors[0];
 
-    const filename = error.file && error.file.split('!').pop();
+    const filename = error.file && error.file.split("!").pop();
     notifier.notify({
       title: pkg.name,
-      message: severity + ': ' + error.name,
-      subtitle: filename || '',
-      icon: path.join(__dirname, 'logo.png')
+      message: severity + ": " + error.name,
+      subtitle: filename || "",
+      icon: path.join(__dirname, "logo.png")
     });
   };
 };
@@ -112,7 +113,7 @@ const getSPAEntry = () => {
       ? config.entry()
       : [
           config.entry(),
-          'webpack-hot-middleware/client.js?noInfo=true&reload=true'
+          "webpack-hot-middleware/client.js?noInfo=true&reload=true"
         ]
   };
 };
@@ -128,14 +129,14 @@ const getEntries = () => {
 
   for (let i = 0; i < entryFiles.length; i++) {
     const filename = entryFiles[i].substring(
-      entryFiles[i].indexOf('views/') + 6,
-      entryFiles[i].lastIndexOf('.')
+      entryFiles[i].indexOf("views/") + 6,
+      entryFiles[i].lastIndexOf(".")
     );
     map[filename] = config.disableHMR
       ? entryFiles[i]
       : [
           entryFiles[i],
-          'webpack-hot-middleware/client.js?noInfo=true&reload=true'
+          "webpack-hot-middleware/client.js?noInfo=true&reload=true"
         ];
   }
 
@@ -152,7 +153,7 @@ exports.entry = function() {
  */
 const generateViewDirectory = name => {
   return (
-    (name = name ? name : 'index'), config.viewOutputRoot() + name + '.html'
+    (name = name ? name : "index"), config.viewOutputRoot() + name + ".html"
   );
 };
 
@@ -160,23 +161,23 @@ const generateViewDirectory = name => {
  * 创建单页HTMLPlugin
  */
 const createSPAHTMLPlugin = () => {
-  return process.env.NODE_ENV == 'development'
+  return process.env.NODE_ENV == "development"
     ? [
         new HtmlWebpackPlugin({
           filename: generateViewDirectory(),
-          template: 'html-withimg-loader!' + config.htmlTemplate()
+          template: "html-withimg-loader!" + config.htmlTemplate()
         })
       ]
     : [
         new HtmlWebpackPlugin({
           filename: generateViewDirectory(),
-          template: 'html-withimg-loader!' + config.htmlTemplate(),
+          template: "html-withimg-loader!" + config.htmlTemplate(),
           minify: {
             removeComments: true,
             collapseWhitespace: true,
             removeAttributeQuotes: true
           },
-          chunksSortMode: 'dependency'
+          chunksSortMode: "dependency"
         })
       ];
 };
@@ -193,18 +194,18 @@ const createHTMLPlugin = () => {
   for (let i = 0; i < entryHTML.length; i++) {
     const filePath = entryHTML[i];
     const filename = filePath.substring(
-      filePath.indexOf('views') + 6,
-      filePath.lastIndexOf('.')
+      filePath.indexOf("views") + 6,
+      filePath.lastIndexOf(".")
     );
 
     const conf = {
-      template: 'html-withimg-loader!' + config.htmlTemplate(),
+      template: "html-withimg-loader!" + config.htmlTemplate(),
       filename: generateViewDirectory(filename),
-      chunks: ['vendor', filename]
+      chunks: ["vendor", filename]
     };
 
-    if (process.env.NODE_ENV != 'development') {
-      conf.chunksSortMode = 'dependency';
+    if (process.env.NODE_ENV != "development") {
+      conf.chunksSortMode = "dependency";
       conf.minify = {
         removeComments: true,
         collapseWhitespace: true,

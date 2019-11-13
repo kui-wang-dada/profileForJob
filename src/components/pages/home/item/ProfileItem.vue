@@ -20,7 +20,8 @@
               :style="item.style"
             >
               <span>{{ item.label }}</span
-              >: <span>{{ item.result }}</span>
+              >:
+              <span>{{ item.result }}</span>
             </el-col>
           </div>
         </el-col>
@@ -35,7 +36,8 @@
               :style="item.style"
             >
               <span>{{ item.label }}</span
-              >: <span>{{ item.result }}</span>
+              >:
+              <span>{{ item.result }}</span>
             </el-col>
           </el-card>
         </el-col>
@@ -57,20 +59,140 @@
     </el-tab-pane>
     <el-tab-pane label="工作经验">
       <el-col :span="24">
-        <el-card class="work-card">
+        <el-card class="work-keda-card">
           <div slot="header">
-            <p>云里服务有限公司</p>
-            <p>2016/5——2017/2</p>
+            <p>厚仁教育</p>
+            <p>2019/3——至今</p>
           </div>
-          <div v-for="item in workData.yunli" :key="item.title">
-            <p class="title">{{ item.title }}</p>
+          <div class="keda-top">
+            <div>
+              <p class="title">{{ workData.houren[0].title }}</p>
+              <div class="body-wrap">
+                <p
+                  class="body"
+                  v-for="bodyItem in workData.houren[0].body"
+                  :key="bodyItem"
+                >
+                  {{ bodyItem }}
+                </p>
+              </div>
+              <div class="tag-wrap">
+                <el-tag v-for="tag in workData.houren[0].skill" :key="tag">{{
+                  tag
+                }}</el-tag>
+              </div>
+            </div>
+            <div>
+              <p class="title">{{ workData.houren[1].title }}</p>
+              <div class="body-wrap">
+                <p
+                  class="body"
+                  v-for="bodyItem in workData.houren[1].body"
+                  :key="bodyItem"
+                >
+                  {{ bodyItem }}
+                </p>
+              </div>
+              <div class="tag-wrap">
+                <el-tag v-for="tag in workData.houren[1].skill" :key="tag">{{
+                  tag
+                }}</el-tag>
+              </div>
+            </div>
+          </div>
+          <div class="keda-bottom">
+            <p class="title">{{ workData.houren[2].title }}</p>
             <div class="body-wrap">
-              <p class="body" v-for="bodyItem in item.body" :key="bodyItem">
+              <p
+                class="body"
+                v-for="bodyItem in workData.houren[2].body"
+                :key="bodyItem"
+              >
                 {{ bodyItem }}
               </p>
             </div>
             <div class="tag-wrap">
-              <el-tag v-for="tag in item.skill" :key="tag">{{ tag }}</el-tag>
+              <el-tag v-for="tag in workData.houren[2].skill" :key="tag">{{
+                tag
+              }}</el-tag>
+            </div>
+          </div>
+        </el-card>
+      </el-col>
+      <el-col :span="24">
+        <el-card class="work-keda-card">
+          <div slot="header">
+            <p>科大讯飞有限公司</p>
+            <p>2018/4——2019/3</p>
+          </div>
+          <div class="keda-top">
+            <div>
+              <p class="title">{{ workData.keda[0].title }}</p>
+              <div class="body-wrap">
+                <p
+                  class="body"
+                  v-for="bodyItem in workData.keda[0].body"
+                  :key="bodyItem"
+                >
+                  {{ bodyItem }}
+                </p>
+              </div>
+              <div class="tag-wrap">
+                <el-tag v-for="tag in workData.keda[0].skill" :key="tag">
+                  {{ tag }}
+                </el-tag>
+              </div>
+            </div>
+            <div>
+              <p class="title">{{ workData.keda[1].title }}</p>
+              <div class="body-wrap">
+                <p
+                  class="body"
+                  v-for="bodyItem in workData.keda[1].body"
+                  :key="bodyItem"
+                >
+                  {{ bodyItem }}
+                </p>
+              </div>
+              <div class="tag-wrap">
+                <el-tag v-for="tag in workData.keda[1].skill" :key="tag">
+                  {{ tag }}
+                </el-tag>
+              </div>
+            </div>
+          </div>
+          <div class="keda-bottom">
+            <p class="title">{{ workData.keda[2].title }}</p>
+            <div class="body-wrap">
+              <p
+                class="body"
+                v-for="bodyItem in workData.keda[2].body"
+                :key="bodyItem"
+              >
+                {{ bodyItem }}
+              </p>
+            </div>
+            <div class="tag-wrap">
+              <el-tag v-for="tag in workData.keda[2].skill" :key="tag">
+                {{ tag }}
+              </el-tag>
+            </div>
+          </div>
+          <div class="keda-bottom">
+            <p class="title">{{ workData.keda[3].title }}</p>
+            <div class="body-wrap">
+              <p
+                class="body"
+                v-for="bodyItem in workData.keda[3].body"
+                :key="bodyItem"
+              >
+                {{ bodyItem }}
+              </p>
+            </div>
+            <div class="tag-wrap">
+              <el-tag v-for="tag in workData.keda[3].skill" :key="tag">
+                {{ tag }}
+              </el-tag>
             </div>
           </div>
         </el-card>
@@ -95,79 +217,20 @@
         </el-card>
       </el-col>
       <el-col :span="24">
-        <el-card class="work-keda-card">
+        <el-card class="work-card">
           <div slot="header">
-            <p>科大讯飞有限公司</p>
-            <p>2018/4——至今</p>
+            <p>云里服务有限公司</p>
+            <p>2016/5——2017/2</p>
           </div>
-          <div class="keda-top">
-            <div>
-              <p class="title">{{ workData.keda[0].title }}</p>
-              <div class="body-wrap">
-                <p
-                  class="body"
-                  v-for="bodyItem in workData.keda[0].body"
-                  :key="bodyItem"
-                >
-                  {{ bodyItem }}
-                </p>
-              </div>
-              <div class="tag-wrap">
-                <el-tag v-for="tag in workData.keda[0].skill" :key="tag">{{
-                  tag
-                }}</el-tag>
-              </div>
-            </div>
-            <div>
-              <p class="title">{{ workData.keda[1].title }}</p>
-              <div class="body-wrap">
-                <p
-                  class="body"
-                  v-for="bodyItem in workData.keda[1].body"
-                  :key="bodyItem"
-                >
-                  {{ bodyItem }}
-                </p>
-              </div>
-              <div class="tag-wrap">
-                <el-tag v-for="tag in workData.keda[1].skill" :key="tag">{{
-                  tag
-                }}</el-tag>
-              </div>
-            </div>
-          </div>
-          <div class="keda-bottom">
-            <p class="title">{{ workData.keda[2].title }}</p>
+          <div v-for="item in workData.yunli" :key="item.title">
+            <p class="title">{{ item.title }}</p>
             <div class="body-wrap">
-              <p
-                class="body"
-                v-for="bodyItem in workData.keda[2].body"
-                :key="bodyItem"
-              >
+              <p class="body" v-for="bodyItem in item.body" :key="bodyItem">
                 {{ bodyItem }}
               </p>
             </div>
             <div class="tag-wrap">
-              <el-tag v-for="tag in workData.keda[2].skill" :key="tag">{{
-                tag
-              }}</el-tag>
-            </div>
-          </div>
-          <div class="keda-bottom">
-            <p class="title">{{ workData.keda[3].title }}</p>
-            <div class="body-wrap">
-              <p
-                class="body"
-                v-for="bodyItem in workData.keda[3].body"
-                :key="bodyItem"
-              >
-                {{ bodyItem }}
-              </p>
-            </div>
-            <div class="tag-wrap">
-              <el-tag v-for="tag in workData.keda[3].skill" :key="tag">{{
-                tag
-              }}</el-tag>
+              <el-tag v-for="tag in item.skill" :key="tag">{{ tag }}</el-tag>
             </div>
           </div>
         </el-card>

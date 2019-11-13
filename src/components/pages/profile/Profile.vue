@@ -12,6 +12,7 @@
       style="width: 60%; height: auto"
       :src="require('@/assets/images/wk.png')"
       :preview-src-list="srcList"
+      lazy
     ></el-image>
   </div>
 </template>
